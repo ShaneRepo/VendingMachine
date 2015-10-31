@@ -41,27 +41,12 @@ namespace VendingMachineSim
                     name.Add(tokens[0]);
                     price.Add(tokens[1]);
                     qty.Add(tokens[2]);
-                    //for (int i = 0; i < tokens.Length; i++)
-                    //{
-                    //    listBoxName.Items.Add(tokens[i]);
-                    //    listBoxPrice.Items.Add(tokens[i + 1]);
-                    //    listBoxQuantity.Items.Add(tokens[i + 2]);
-                    //}
-                    //for (int j = 1; j < tokens.Length; j++)
-                    //{
-                    //    listBoxPrice.Items.Add(tokens[j]);
-                    //}
-                    //for (int k = 2; k < tokens.Length; k++)
-                    //{
-                    //    listBoxQuantity.Items.Add(tokens[k]);
-                    //}
-                            
-                        
-                        
-                    
-                    //listBoxVending.Items.Add(line);
-                    //listBoxName.Items.Add(border);
+                                                       
                 }
+                foreach (string list in name)
+                {
+                    listBoxName.Items.Add(list).ToString();
+                }  
             }                
             catch (Exception ex)
             {
