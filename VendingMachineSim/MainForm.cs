@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace VendingMachineSim
 {
@@ -15,6 +16,11 @@ namespace VendingMachineSim
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void buttonLoadMachine_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
