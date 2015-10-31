@@ -14,9 +14,9 @@ namespace VendingMachineSim
     public partial class MainForm : Form
     {
         char[] delim = { ',' };
-        string name = "Name";
-        string price = "Price";
-        string quantity = "Quantity";
+        //string name = "Name";
+        //string price = "Price";
+        //string quantity = "Quantity";
         string border = "------------------";
         string line;
         string[] tokens;
@@ -25,7 +25,9 @@ namespace VendingMachineSim
         {
             InitializeComponent();
         }
-        
+        List <string> name = new List<string>();
+        List<string> price = new List<string>();
+        List<string> qty = new List<string>();
         
         private void buttonLoadMachine_Click(object sender, EventArgs e)
         {        
@@ -36,9 +38,9 @@ namespace VendingMachineSim
                 {
                     line = file.ReadLine();
                     tokens = line.Split(delim);
-                    listBoxName.Items.Add(tokens[0]);
-                    listBoxPrice.Items.Add(tokens[1]);
-                    listBoxQuantity.Items.Add(tokens[2]);
+                    name.Add(tokens[0]);
+                    price.Add(tokens[1]);
+                    qty.Add(tokens[2]);
                     //for (int i = 0; i < tokens.Length; i++)
                     //{
                     //    listBoxName.Items.Add(tokens[i]);
@@ -73,12 +75,36 @@ namespace VendingMachineSim
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            listBoxName.Items.Add(name);
-            listBoxName.Items.Add(border);
-            listBoxPrice.Items.Add(price);
-            listBoxPrice.Items.Add(border);
-            listBoxQuantity.Items.Add(quantity);
-            listBoxQuantity.Items.Add(border);
+            //listBoxName.Items.Add(name);
+            //listBoxName.Items.Add(border);
+            //listBoxPrice.Items.Add(price);
+            //listBoxPrice.Items.Add(border);
+            //listBoxQuantity.Items.Add(quantity);
+            //listBoxQuantity.Items.Add(border);
+        }
+
+        private void listBoxName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int name = 0;
+            //int price = 0;
+            double curr;
+            int many = 0;
+            int index = listBoxName.SelectedIndex;
+            switch(index)
+            {
+                case 0:
+                    {
+                        curr = double.Parse(price[0]);
+                        textBox1.Text = curr.ToString("C");
+                        break;
+                    }
+                default:
+                    {
+                        MessageBox.Show("Select an item to see how much it costs.");
+                        break;
+                    }
+            }
+
         }
     }
 }

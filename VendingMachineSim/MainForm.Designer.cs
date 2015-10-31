@@ -31,8 +31,8 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.listBoxName = new System.Windows.Forms.ListBox();
             this.buttonLoadMachine = new System.Windows.Forms.Button();
-            this.listBoxPrice = new System.Windows.Forms.ListBox();
-            this.listBoxQuantity = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -52,6 +52,7 @@
             this.listBoxName.Name = "listBoxName";
             this.listBoxName.Size = new System.Drawing.Size(161, 95);
             this.listBoxName.TabIndex = 1;
+            this.listBoxName.SelectedIndexChanged += new System.EventHandler(this.listBoxName_SelectedIndexChanged);
             // 
             // buttonLoadMachine
             // 
@@ -63,29 +64,27 @@
             this.buttonLoadMachine.UseVisualStyleBackColor = true;
             this.buttonLoadMachine.Click += new System.EventHandler(this.buttonLoadMachine_Click);
             // 
-            // listBoxPrice
+            // textBox1
             // 
-            this.listBoxPrice.FormattingEnabled = true;
-            this.listBoxPrice.Location = new System.Drawing.Point(384, 144);
-            this.listBoxPrice.Name = "listBoxPrice";
-            this.listBoxPrice.Size = new System.Drawing.Size(146, 95);
-            this.listBoxPrice.TabIndex = 3;
+            this.textBox1.Location = new System.Drawing.Point(233, 313);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 3;
             // 
-            // listBoxQuantity
+            // textBox2
             // 
-            this.listBoxQuantity.FormattingEnabled = true;
-            this.listBoxQuantity.Location = new System.Drawing.Point(543, 144);
-            this.listBoxQuantity.Name = "listBoxQuantity";
-            this.listBoxQuantity.Size = new System.Drawing.Size(146, 95);
-            this.listBoxQuantity.TabIndex = 4;
+            this.textBox2.Location = new System.Drawing.Point(443, 312);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 4;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 628);
-            this.Controls.Add(this.listBoxQuantity);
-            this.Controls.Add(this.listBoxPrice);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonLoadMachine);
             this.Controls.Add(this.listBoxName);
             this.Controls.Add(this.labelTitle);
@@ -102,8 +101,8 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.ListBox listBoxName;
         private System.Windows.Forms.Button buttonLoadMachine;
-        private System.Windows.Forms.ListBox listBoxPrice;
-        private System.Windows.Forms.ListBox listBoxQuantity;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
