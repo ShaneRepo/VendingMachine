@@ -78,49 +78,65 @@ namespace VendingMachineSim
                 case 0:
                     {
                         curr = double.Parse(price[0]);
-                        textBox1.Text = curr.ToString("C");
+                        textBoxPrice.Text = curr.ToString("C");
+                        many = int.Parse(qty[0]);
+                        textBoxQty.Text = many.ToString();
                         break;
                     }
                 case 1:
                     {
                         curr = double.Parse(price[1]);
-                        textBox1.Text = curr.ToString("C");
+                        textBoxPrice.Text = curr.ToString("C");
+                        many = int.Parse(qty[1]);
+                        textBoxQty.Text = many.ToString();
                         break;
                     }
                 case 2:
                     {
                         curr = double.Parse(price[2]);
-                        textBox1.Text = curr.ToString("C");
+                        textBoxPrice.Text = curr.ToString("C");
+                        many = int.Parse(qty[2]);
+                        textBoxQty.Text = many.ToString();
                         break;
                     }
                 case 3:
                     {
                         curr = double.Parse(price[3]);
-                        textBox1.Text = curr.ToString("C");
+                        textBoxPrice.Text = curr.ToString("C");
+                        many = int.Parse(qty[3]);
+                        textBoxQty.Text = many.ToString();
                         break;
                     }
                 case 4:
                     {
                         curr = double.Parse(price[4]);
-                        textBox1.Text = curr.ToString("C");
+                        textBoxPrice.Text = curr.ToString("C");
+                        many = int.Parse(qty[4]);
+                        textBoxQty.Text = many.ToString();
                         break;
                     }
                 case 5:
                     {
                         curr = double.Parse(price[5]);
-                        textBox1.Text = curr.ToString("C");
+                        textBoxPrice.Text = curr.ToString("C");
+                        many = int.Parse(qty[5]);
+                        textBoxQty.Text = many.ToString();
                         break;
                     }
                 case 6:
                     {
                         curr = double.Parse(price[6]);
-                        textBox1.Text = curr.ToString("C");
+                        textBoxPrice.Text = curr.ToString("C");
+                        many = int.Parse(qty[6]);
+                        textBoxQty.Text = many.ToString();
                         break;
                     }
                 case 7:
                     {
                         curr = double.Parse(price[7]);
-                        textBox1.Text = curr.ToString("C");
+                        textBoxPrice.Text = curr.ToString("C");
+                        many = int.Parse(qty[7]);
+                        textBoxQty.Text = many.ToString();
                         break;
                     }
                 default:

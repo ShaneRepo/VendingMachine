@@ -31,8 +31,8 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.listBoxName = new System.Windows.Forms.ListBox();
             this.buttonLoadMachine = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.textBoxQty = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -64,27 +64,27 @@
             this.buttonLoadMachine.UseVisualStyleBackColor = true;
             this.buttonLoadMachine.Click += new System.EventHandler(this.buttonLoadMachine_Click);
             // 
-            // textBox1
+            // textBoxPrice
             // 
-            this.textBox1.Location = new System.Drawing.Point(233, 313);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.textBoxPrice.Location = new System.Drawing.Point(233, 313);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPrice.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxQty
             // 
-            this.textBox2.Location = new System.Drawing.Point(443, 312);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBoxQty.Location = new System.Drawing.Point(443, 312);
+            this.textBoxQty.Name = "textBoxQty";
+            this.textBoxQty.Size = new System.Drawing.Size(100, 20);
+            this.textBoxQty.TabIndex = 4;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 628);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxQty);
+            this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.buttonLoadMachine);
             this.Controls.Add(this.listBoxName);
             this.Controls.Add(this.labelTitle);
@@ -101,8 +101,8 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.ListBox listBoxName;
         private System.Windows.Forms.Button buttonLoadMachine;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.TextBox textBoxQty;
     }
 }
 
