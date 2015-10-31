@@ -69,9 +69,7 @@ namespace VendingMachineSim
         }
 
         private void listBoxName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int name = 0;
-            //int price = 0;
+        {         
             double curr;
             int many = 0;
             int index = listBoxName.SelectedIndex;
@@ -80,6 +78,48 @@ namespace VendingMachineSim
                 case 0:
                     {
                         curr = double.Parse(price[0]);
+                        textBox1.Text = curr.ToString("C");
+                        break;
+                    }
+                case 1:
+                    {
+                        curr = double.Parse(price[1]);
+                        textBox1.Text = curr.ToString("C");
+                        break;
+                    }
+                case 2:
+                    {
+                        curr = double.Parse(price[2]);
+                        textBox1.Text = curr.ToString("C");
+                        break;
+                    }
+                case 3:
+                    {
+                        curr = double.Parse(price[3]);
+                        textBox1.Text = curr.ToString("C");
+                        break;
+                    }
+                case 4:
+                    {
+                        curr = double.Parse(price[4]);
+                        textBox1.Text = curr.ToString("C");
+                        break;
+                    }
+                case 5:
+                    {
+                        curr = double.Parse(price[5]);
+                        textBox1.Text = curr.ToString("C");
+                        break;
+                    }
+                case 6:
+                    {
+                        curr = double.Parse(price[6]);
+                        textBox1.Text = curr.ToString("C");
+                        break;
+                    }
+                case 7:
+                    {
+                        curr = double.Parse(price[7]);
                         textBox1.Text = curr.ToString("C");
                         break;
                     }
