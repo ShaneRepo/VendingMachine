@@ -161,6 +161,7 @@ namespace VendingMachineSim
         private void buttonCancel_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Thank you, come again :) .");
+            this.Close();
         }
 
         private void buttonPurchase_Click(object sender, EventArgs e)
