@@ -13,11 +13,8 @@ namespace VendingMachineSim
 {
     public partial class MainForm : Form
     {
-        char[] delim = { ',' };
-        //string name = "Name";
-        //string price = "Price";
-        //string quantity = "Quantity";
-        string border = "------------------";
+        Boolean isOn = false;
+        char[] delim = { ',' };     
         string line;
         string[] tokens;
         StreamReader file;
@@ -25,28 +22,41 @@ namespace VendingMachineSim
         {
             InitializeComponent();
         }
+        // lists to hold data
         List <string> name = new List<string>();
         List<string> price = new List<string>();
         List<string> qty = new List<string>();
         
         private void buttonLoadMachine_Click(object sender, EventArgs e)
-        {        
+        {  
+            if (isOn == true) // check if machine is loaded already
+            {
+                // inform user machine is loaded and exit event handler
+                MessageBox.Show("The machine is already on!");
+                return;
+            }
             try
             {
                 file = File.OpenText("JunkFood.csv");
                 while (!file.EndOfStream)
                 {
+                    // read the junkfood csv file
                     line = file.ReadLine();
+                    // tokenize the csv file
                     tokens = line.Split(delim);
+                    // add product name to string list
                     name.Add(tokens[0]);
+                    // add product price to string list
                     price.Add(tokens[1]);
+                    // add product quantity  to string list
                     qty.Add(tokens[2]);
                                                        
                 }
                 foreach (string list in name)
                 {
-                    listBoxName.Items.Add(list).ToString();
-                }  
+                    listBoxName.Items.Add(list).ToString(); // add names to listbox
+                }
+                isOn = true; // flag set to true if machine is loaded
             }                
             catch (Exception ex)
             {
@@ -54,22 +64,17 @@ namespace VendingMachineSim
             }
             finally
             {
-                file.Close();
+                file.Close(); // close file
             }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //listBoxName.Items.Add(name);
-            //listBoxName.Items.Add(border);
-            //listBoxPrice.Items.Add(price);
-            //listBoxPrice.Items.Add(border);
-            //listBoxQuantity.Items.Add(quantity);
-            //listBoxQuantity.Items.Add(border);
+            
         }
 
         private void listBoxName_SelectedIndexChanged(object sender, EventArgs e)
-        {         
+        {         // switch statement to determine price and qty
             double curr;
             int many = 0;
             int index = listBoxName.SelectedIndex;
@@ -146,6 +151,29 @@ namespace VendingMachineSim
                     }
             }
 
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonCancel_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you, come again :) .");
+        }
+
+        private void buttonPurchase_Click(object sender, EventArgs e)
+        {
+            if (listBoxName.SelectedIndex != -1)
+            {
+                MessageBox.Show("Thank you for your purchase.");
+            }
+            else
+            {
+                MessageBox.Show("Select an item to see how much it costs.");
+                return;
+            }
         }
     }
 }
